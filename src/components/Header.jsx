@@ -29,8 +29,7 @@ function Header(){
                 </div>
 
 
-            {open && 
-                <div className="bg-blue-700 shadow-lg shadow-black  pb-[1px]">
+                <div className={`transition-all duration-300 overflow-hidden bg-blue-700 shadow-lg shadow-black   pb-[1px] ${open ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0" }`}>
                     <div className="bg-stone-950 p-2 text-stone-200  flex flex-col gap-2">
                         <Link to='/about' className="w-full  mt-2 bg-stone-700/30 p-2 rounded-xl">About</Link>
                         <Link to='/about' className="w-full  bg-stone-700/30 p-2 rounded-xl">Blog</Link>
@@ -46,7 +45,7 @@ function Header(){
 
                     </div>
                 </div>
-            }
+            
 
 
         </>
