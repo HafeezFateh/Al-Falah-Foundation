@@ -8,8 +8,8 @@ function Header(){
 
     return(
         <>
-            <div className="shadow-lg shadow-blue-800/40">
-                <div className="bg-stone-950   shadow-lg p-5 flex items-center justify-between ">
+            <div className="shadow-lg shadow-blue-800/70">
+                <div className="bg-stone-950 shadow-lg p-5 flex items-center justify-between ">
                     <h1 className="text-xl font-semibold text-stone-100">Al Falah Foundation</h1>
                     <div onClick={toggleMenu} dir="rtl" class="lg:hidden  flex flex-col gap-1"><div className="w-[20px] h-[2px] bg-white"></div><div className="w-[15px] h-[2px] bg-white "></div><div className="w-[10px] h-[2px] bg-white "></div></div>
 
@@ -20,7 +20,7 @@ function Header(){
                         <Link to='/' className="hover:text-blue-700">Login</Link>
                      </div>
                     
-                    <div className="group bg-blue-900 hidden hover:shadow-lg hover:bg-blue-900/90 lg:flex  border-blue-400 gap-3 items-center  rounded-3xl px-8 py-2">
+                    <div className="group bg-blue-900 hidden hover:shadow-lg hover:bg-blue-900/90 lg:flex   gap-3 items-center  rounded-3xl px-8 py-2">
                         <Link to='/'  className="text-lg  text-stone-200 font-semibold ">Join us</Link>
                         <span class="material-symbols-outlined group-hover:translate-x-3 text-stone-200 transition">arrow_right_alt</span>
 
@@ -37,10 +37,12 @@ function Header(){
                         <Link to='/about' className="w-full  bg-stone-700/30 p-2 rounded-xl">Materials</Link>
                         <Link to='/about' className="w-full  bg-stone-700/30 p-2 rounded-xl">Login</Link>
                         <hr className="text-stone-600 mt-2  "/>
-                        <div className="group p-2 flex gap-1">
-                            <Link to='/about' className="font-semibold text-stone-200">Join</Link>
-                            <span class="material-symbols-outlined group-hover:translate-x-3 text-blue-700 transition">chevron_right</span>
-                        </div>
+                        <Link to='/'>
+                            <div className="group p-2 flex gap-1">
+                                <p className="font-semibold text-stone-200">Join</p>
+                                <span class="material-symbols-outlined group-hover:translate-x-3 text-blue-700 transition">chevron_right</span>
+                            </div>
+                        </Link>
 
                     </div>
                 </div>
