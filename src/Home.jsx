@@ -1,8 +1,15 @@
+import { useState } from "react";
 import FaqsCard from "./components/FaqsCard";
 import VisionCard from "./components/VisionCard";
 import Layout from "./layouts/Layout";
+import JoinUsCard from "./components/JoinUsCard";
 
 function Home(){
+
+    const [openForm, setForm] = useState(false);
+
+    const handleForm = () => setForm(prev => !prev);
+
     return (
 
         <>
@@ -14,7 +21,15 @@ function Home(){
                 <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-br from-stone-500  to-stone-200 bg-clip-text text-transparent">We are here to spread the truth by the permisssion of ALLAH</h1>
             </div>
 
-            <div className="group relative w-fit mt-10">
+         {openForm &&
+            
+                <JoinUsCard
+                    onClose={handleForm}
+                />
+           
+        } 
+
+            <div onClick={handleForm} className="group relative w-fit mt-10">
                 <div className="absolute z-[-1] blur-xs group-hover:blur rounded-lg  inset-0 bg-gradient-to-tl via-stone-700 from-blue-600 to-blue-500  "></div>
                 <div className="bg-gradient-to-tl via-stone-700 from-blue-600 to-blue-500  rounded-2xl p-[2px] w-fit">
                   <div className="group flex bg-stone-950 rounded-2xl items-center px-3 py-1 gap-3 justify-center ">
